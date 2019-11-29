@@ -7,10 +7,11 @@ console.log('Welcome to the Brain Games!\nAnswer "yes" if the number is even, ot
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
-for (let i = 0; i < 3; i += 1) {
+for (let i = 0; i < 3; i++) {
     const num = Math.floor(Math.random() * (100 - 1));
     console.log(`Question: ${num}`);
     const userAnswer = readlineSync.question('Your answer: ');
+
     if (userAnswer !== 'yes' && userAnswer !== 'no') {
         return console.log(`Your answer should be 'yes' or 'no'.\nLet's try again, ${userName}`);
     };
@@ -18,11 +19,10 @@ for (let i = 0; i < 3; i += 1) {
             console.log('Correct!')
         } else if (num % 2 !== 0 && userAnswer === 'no') {
             console.log('Correct!');
-        }
-         else if (num % 2 === 0 && userAnswer === 'no') {
-                return console.log(`''no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}`);
+        } else if (num % 2 === 0 && userAnswer === 'no') {
+            return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}`);
         } else {
-        return console.log(`''yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}`);
+            return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}`);
         };
     };
     console.log(`Congratulations, ${userName}`);
