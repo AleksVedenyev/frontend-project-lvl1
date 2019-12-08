@@ -8,16 +8,22 @@ const welcomeCondition = (condition) => {
   return userName;
 };
 
-const attempts = 3;
-
 const startGame = (condition, func) => {
+  const attempts = 3;
   const userName = welcomeCondition(condition);
   for (let i = 0; i < attempts; i += 1) {
     const question = car(func);
-    const answer = cdr(func);
+    const rightAnswer = cdr(func);
     console.log(`Question: ${question}`);
-    
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer === rightAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}. Let's try again, ${userName}`);
+      return;
+    }
   }
+  console.log(`Congratulations, ${userName}`);
 };
 
 export default startGame;
