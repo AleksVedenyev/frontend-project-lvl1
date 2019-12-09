@@ -1,3 +1,3 @@
-const mathRandom = Math.floor(Math.random() * (100 - 1));
+const mathRandom = (max, min) => Math.floor(Math.random() * (max - min));
 
 export default mathRandom;

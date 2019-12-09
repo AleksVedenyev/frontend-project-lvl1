@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import { cons, car, cdr, toString } from '@hexlet/pairs';
+import mathRandom from './utilities';
 
 const welcomeCondition = (condition) => {
   console.log(`Welcome to the Brain Games!\n${condition}`);
@@ -12,8 +13,9 @@ const startGame = (condition, func) => {
   const attempts = 3;
   const userName = welcomeCondition(condition);
   for (let i = 0; i < attempts; i += 1) {
-    const question = car(func);
-    const rightAnswer = cdr(func);
+    const makePair = func();
+    const question = car(makePair);
+    const rightAnswer = cdr(makePair);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === rightAnswer) {
