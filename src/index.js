@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 import { cons, car, cdr, toString } from '@hexlet/pairs';
-import mathRandom from './utilities';
 
 const welcomeCondition = (condition) => {
   console.log(`Welcome to the Brain Games!\n${condition}`);
