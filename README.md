@@ -5,4 +5,7 @@
 [![Build Status](https://travis-ci.org/AleksVedenyev/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/AleksVedenyev/frontend-project-lvl1)
 
 Installation and launch of Brain Even:
-[![asciicast](https://asciinema.org/a/qFL5kWm9nGIa1QIXeiDdVP6Lj.svg)](https://asciinema.org/a/qFL5kWm9nGIa1QIXeiDdVP6Lj)
+[![asciicast](https://asciinema.org/a/ZNTX8yHUsn2Qc0xK6odEiszIz.svg)](https://asciinema.org/a/ZNTX8yHUsn2Qc0xK6odEiszIz)
+
+Installation and launch of Brain Calc:
+[![asciicast](https://asciinema.org/a/I25fLFNeB3HvJn6Uk5PnUofyX.svg)](https://asciinema.org/a/I25fLFNeB3HvJn6Uk5PnUofyX)

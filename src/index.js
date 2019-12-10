@@ -20,7 +20,7 @@ const startGame = (condition, func) => {
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}. Let's try again, ${userName}`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${userName}`);
       return;
     }
   }
