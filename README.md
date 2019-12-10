@@ -9,3 +9,6 @@ Installation and launch of Brain Even:
 
 Installation and launch of Brain Calc:
 [![asciicast](https://asciinema.org/a/I25fLFNeB3HvJn6Uk5PnUofyX.svg)](https://asciinema.org/a/I25fLFNeB3HvJn6Uk5PnUofyX)
+
+Installation and launch of Brain GCD:
+[![asciicast](https://asciinema.org/a/VfdFBV5aNV1IMKkboVOnjH0Wx.svg)](https://asciinema.org/a/VfdFBV5aNV1IMKkboVOnjH0Wx)
