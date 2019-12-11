@@ -6,17 +6,25 @@ const condition = 'What number is missing in the progression?';
 
 const brainProgression = () => {
   const getData = () => {
-    const number1 = mathRandom(50, 1);
-    const number2 = mathRandom(50, 1);
-    const question = `${number1} ${number2}`;
-    const answer = (a, b) => {
-      let divisor = a;
-      while (a % divisor !== 0 || b % divisor !== 0) {
-        divisor -= 1;
+    const firstNumberOfSequence = mathRandom(10, 1);
+    const sequenceNumber = mathRandom(5, 1);
+    const stringNumber = String(firstNumberOfSequence);
+
+      let stringResult = `${stringNumber}`;
+      let numberResult = firstNumberOfSequence;
+      console.log(stringResult);
+      while (stringResult.length < 9) {
+        numberResult += sequenceNumber;
+        stringResult += `${String(numberResult)}`;
+        console.log(stringResult);
       }
-      return String(divisor);
-    };
-    const brainCalcPair = cons(question, answer(number1, number2));
+      
+
+    const answerRandom = Math.floor(Math.random() * stringResult.length);
+    const answer = stringResult[answerRandom];
+
+    const brainCalcPair = cons(stringResult, answer);
+
     return brainCalcPair;
   };
   return startGame(condition, getData);
