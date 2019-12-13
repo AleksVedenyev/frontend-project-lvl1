@@ -12,3 +12,6 @@ Installation and launch of Brain Calc:
 
 Installation and launch of Brain GCD:
 [![asciicast](https://asciinema.org/a/VfdFBV5aNV1IMKkboVOnjH0Wx.svg)](https://asciinema.org/a/VfdFBV5aNV1IMKkboVOnjH0Wx)
+
+Installation and launch of Brain Progression:
+[![asciicast](https://asciinema.org/a/uJ4wLCNwO1wW3yaIqN18X3l0Q.svg)](https://asciinema.org/a/uJ4wLCNwO1wW3yaIqN18X3l0Q)
