@@ -15,3 +15,6 @@ Installation and launch of Brain GCD:
 
 Installation and launch of Brain Progression:
 [![asciicast](https://asciinema.org/a/uJ4wLCNwO1wW3yaIqN18X3l0Q.svg)](https://asciinema.org/a/uJ4wLCNwO1wW3yaIqN18X3l0Q)
+
+Installation and launch of Brain Prime:
+[![asciicast](https://asciinema.org/a/jhkRuRpt3eDu9gqVd6EZosUYm.svg)](https://asciinema.org/a/jhkRuRpt3eDu9gqVd6EZosUYm)
