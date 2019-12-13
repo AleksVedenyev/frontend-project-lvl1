@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import startGame from '..';
-import mathRandom from '../utilities';
+import mathRandom from '../math-random-module';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 
