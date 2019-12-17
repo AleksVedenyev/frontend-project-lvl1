@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
+const attempts = 3;
+
 const startGame = (condition, func) => {
-  const attempts = 3;
   console.log(`Welcome to the Brain Games!\n${condition}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);

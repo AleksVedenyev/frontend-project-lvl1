@@ -5,8 +5,8 @@ import mathRandom from '../math-random';
 const condition = 'Find the greatest common divisor of given numbers.';
 
 const getData = () => {
-  const number1 = mathRandom(50, 1);
-  const number2 = mathRandom(50, 1);
+  const number1 = mathRandom(1, 50);
+  const number2 = mathRandom(1, 50);
   const question = `${number1} ${number2}`;
   const answer = (a, b) => {
     let divisor = a;
