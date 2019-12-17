@@ -1,16 +1,11 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-const welcomeCondition = (condition) => {
+const startGame = (condition, func) => {
+  const attempts = 3;
   console.log(`Welcome to the Brain Games!\n${condition}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
-const startGame = (condition, func) => {
-  const attempts = 3;
-  const userName = welcomeCondition(condition);
   for (let i = 0; i < attempts; i += 1) {
     const makePair = func();
     const question = car(makePair);
