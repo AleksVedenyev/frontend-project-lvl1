@@ -10,13 +10,13 @@ const getData = () => {
   const randomDeletedElem = mathRandom(1, progressionLength - 1);
   const progressionDifference = mathRandom(1, 20);
   const getProgression = (firstNum, progressionDiff) => {
-    const arr = [];
+    const progression = [];
     let nextTermOfProgression = firstNum;
     for (let i = 0; i < progressionLength; i += 1) {
       nextTermOfProgression += progressionDiff;
-      arr.push(nextTermOfProgression);
+      progression.push(nextTermOfProgression);
     }
-    return arr;
+    return progression;
   };
   const finalProgression = getProgression(firstNumOfProgression, progressionDifference);
   const deletedElem = finalProgression.splice(randomDeletedElem, 1, '..');

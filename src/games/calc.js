@@ -8,21 +8,17 @@ const operators = ['+', '-', '*'];
 const getData = () => {
   const number1 = mathRandom(1, 10);
   const number2 = mathRandom(1, 10);
-  const operatorRand = Math.floor(Math.random() * operators.length);
+  const operatorRand = mathRandom(0, operators.length - 1);
   const operator = operators[operatorRand];
   const question = `${number1} ${operator} ${number2}`;
   const answer = () => {
-    let result = 0;
-    switch (operatorRand) {
-      case 0:
-        result = number1 + number2;
-        return String(result);
-      case 1:
-        result = number1 - number2;
-        return String(result);
+    switch (operator) {
+      case '+':
+        return String(number1 + number2);
+      case '-':
+        return String(number1 - number2);
       default:
-        result = number1 * number2;
-        return String(result);
+        return String(number1 * number2);
     }
   };
   const brainCalcPair = cons(question, answer());

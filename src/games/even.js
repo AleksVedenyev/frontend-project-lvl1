@@ -7,16 +7,7 @@ const isEven = (num) => num % 2 === 0;
 
 const getData = () => {
   const question = mathRandom(1, 100);
-  const result = isEven(question);
-  const getAnswer = (res) => {
-    switch (res) {
-      case true:
-        return 'yes';
-      default:
-        return 'no';
-    }
-  };
-  const answer = getAnswer(result);
+  const answer = isEven(question) ? 'yes' : 'no';
   const brainEvenPair = cons(question, answer);
   return brainEvenPair;
 };

@@ -4,7 +4,8 @@ import { car, cdr } from '@hexlet/pairs';
 const attempts = 3;
 
 const startGame = (condition, func) => {
-  console.log(`Welcome to the Brain Games!\n${condition}`);
+  console.log('Welcome to the Brain Games!');
+  console.log(`${condition}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   for (let i = 0; i < attempts; i += 1) {
