@@ -8,10 +8,10 @@ const operators = ['+', '-', '*'];
 const getData = () => {
   const number1 = mathRandom(1, 10);
   const number2 = mathRandom(1, 10);
-  const operatorRand = mathRandom(0, operators.length - 1);
-  const operator = operators[operatorRand];
+  const randomOperator = mathRandom(0, operators.length - 1);
+  const operator = operators[randomOperator];
   const question = `${number1} ${operator} ${number2}`;
-  const answer = () => {
+  const getAnswer = () => {
     switch (operator) {
       case '+':
         return String(number1 + number2);
@@ -21,10 +21,7 @@ const getData = () => {
         return String(number1 * number2);
     }
   };
-  const brainCalcPair = cons(question, answer());
-  return brainCalcPair;
+  return cons(question, getAnswer());
 };
 
-const brainCalc = () => startGame(condition, getData);
-
-export default brainCalc;
+export default () => startGame(condition, getData);

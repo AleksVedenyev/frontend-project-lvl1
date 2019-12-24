@@ -8,10 +8,7 @@ const isEven = (num) => num % 2 === 0;
 const getData = () => {
   const question = mathRandom(1, 100);
   const answer = isEven(question) ? 'yes' : 'no';
-  const brainEvenPair = cons(question, answer);
-  return brainEvenPair;
+  return cons(question, answer);
 };
 
-const brainEven = () => startGame(condition, getData);
-
-export default brainEven;
+export default () => startGame(condition, getData);

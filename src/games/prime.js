@@ -4,11 +4,11 @@ import mathRandom from '../math-random';
 
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {
-  if (num <= 1) {
+  if (num < 2) {
     return false;
   }
   let counter = 2;
-  while (counter < num) {
+  while (counter <= num / 2) {
     if (num % counter === 0) {
       return false;
     }
@@ -18,13 +18,9 @@ const isPrime = (num) => {
 };
 
 const getData = () => {
-  const question = mathRandom(-1, 100);
+  const question = mathRandom(1, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
-  const brainCalcPair = cons(question, answer);
-
-  return brainCalcPair;
+  return cons(question, answer);
 };
 
-const brainProgression = () => startGame(condition, getData);
-
-export default brainProgression;
+export default () => startGame(condition, getData);
