@@ -3,15 +3,15 @@ import { car, cdr } from '@hexlet/pairs';
 
 const attemptsCount = 3;
 
-const startGame = (condition, func) => {
+const playGame = (condition, getData) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${condition}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   for (let i = 0; i < attemptsCount; i += 1) {
-    const pair = func();
-    const question = car(pair);
-    const rightAnswer = cdr(pair);
+    const dataForGame = getData();
+    const question = car(dataForGame);
+    const rightAnswer = cdr(dataForGame);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === rightAnswer) {
@@ -25,4 +25,4 @@ const startGame = (condition, func) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default startGame;
+export default playGame;

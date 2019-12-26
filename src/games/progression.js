@@ -1,28 +1,27 @@
 import { cons } from '@hexlet/pairs';
-import startGame from '..';
-import mathRandom from '../math-random';
+import playGame from '..';
+import getRandomValue from '../random-value';
 
 const condition = 'What number is missing in the progression?';
 const progressionLength = 10;
+const getProgression = (firstNum, progressionDifference) => {
+  const progression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    const nextTermOfProgression = firstNum + progressionDifference * i;
+    progression.push(nextTermOfProgression);
+  }
+  return progression;
+};
 
 const getData = () => {
-  const firstNumber = mathRandom(1, 8);
-  const randomDeletedElement = mathRandom(1, progressionLength - 1);
-  const difference = mathRandom(1, 20);
-  const getProgression = (firstNum, progressionDifference) => {
-    const progression = [];
-    for (let i = 0; i < progressionLength; i += 1) {
-      const nextTermOfProgression = firstNum + progressionDifference * i;
-      progression.push(nextTermOfProgression);
-    }
-    return progression;
-  };
+  const firstNumber = getRandomValue(1, 8);
+  const indexOfDeletedElement = getRandomValue(1, progressionLength - 1);
+  const difference = getRandomValue(1, 20);
   const finalProgression = getProgression(firstNumber, difference);
-  const deletedElement = finalProgression.splice(randomDeletedElement, 1, '..');
+  const answer = finalProgression.splice(indexOfDeletedElement, 1, '..').join();
   const question = finalProgression.join(', ');
-  const answer = deletedElement.join();
 
   return cons(question, answer);
 };
 
-export default () => startGame(condition, getData);
+export default () => playGame(condition, getData);
